@@ -8,3 +8,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import InstantSearch from 'vue-instantsearch';
+Vue.use(InstantSearch);
+
+Vue.component('my-search', require('./components/MySearch.vue').default);
+
+var app = new Vue({
+  el: '#app',
+
+})
+

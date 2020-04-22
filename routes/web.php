@@ -7,13 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('github/{user}', 'ApiController@getGithub');
+Route::get('post/search', 'PostController@search')->name('post.search');
+Route::get('post/searchjs', 'PostController@searchJs')->name('post.searchjs');
+Route::resource('post', 'PostController');
 
-Route::get('weather', 'ApiController@getWeather')->name('weather');
-Route::post('weather/resutl', 'ApiController@postWeather')->name('weather.result');
-
-Route::get('weatherjs', 'ApiController@getWeatherJs')->name('weatherjs');
-Route::post('weather/ready', 'ApiController@postWeatherJs')->name('weather.ready');
 
 Route::get('/', function () {
     return view('welcome');

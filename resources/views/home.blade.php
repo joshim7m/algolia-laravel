@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <ul><a href="{{route('post.create')}}">Create Post</a></ul>
+                    <ul><a href="{{route('post.index')}}">All Post</a></ul>
+                    <ul><a href="{{route('post.search')}}">Search Server Side</a></ul>
+                    <ul><a href="{{route('post.searchjs')}}">Search Client Side</a></ul>
                 </div>
             </div>
         </div>
